@@ -8,14 +8,14 @@ export class DialogsService {
 
   constructor(private snack:MatSnackBar) { }
 
- showMessage(message:string){
+ showMessage(message:string,isError:boolean){
 
 this.snack.open(message,"X", {
 
   duration: 3000,
   horizontalPosition: "right",
   verticalPosition: "top",
-  panelClass:"snackbar-card"
+  panelClass:  isError?["snackbar-card-error"]:"snackbar-card"
   
 
 

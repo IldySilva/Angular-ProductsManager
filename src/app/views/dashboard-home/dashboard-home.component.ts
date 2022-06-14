@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HeaderservicesService } from 'src/app/services/view/headerData/headerservices.service';
 
 @Component({
   selector: 'app-dashboard-home',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private headerServices: HeaderservicesService) {
+headerServices.headerData.title="Home"
+
+   }
 
   ngOnInit(): void {
   }
