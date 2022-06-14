@@ -1,0 +1,19 @@
+.logo{
+font-size: 2rem;
+color: black;
+}
+.logo a{
+
+    text-decoration: none;
+
+}
+.logo span{
+
+    font-weight: bold;
+}
+.currentTab{
+   margin-left: 10px;
+   font-size: .80rem;
+   
+}
+
