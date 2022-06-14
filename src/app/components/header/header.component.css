@@ -1,12 +1,12 @@
 .logo{
-font-size: 2rem;
 color: black;
+text-decoration: none;
 }
-.logo a{
-
-    text-decoration: none;
+.logo h2{
+    font-size: 2rem;
 
 }
+
 .logo span{
 
     font-weight: bold;
