@@ -1,0 +1,13 @@
+
+<div class="confirm-container">
+        
+    <h2 matDialogTitle class="title"><i class="material-icons" >warning</i>Are you sure?</h2>
+    <p matDialogContent class="content"><em>You'll delete the selected product.This cannont be undone..</em></p>
+    
+    <mat-dialog-actions class="actions">
+        <button mat-button matDialogClose class="cancel"  >Cancel</button>
+        <button  (click)="deleteProduct()" mat-button matDialogClose class="accept"  >Confirm</button>
+    </mat-dialog-actions>
+
+
+</div>

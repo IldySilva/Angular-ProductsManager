@@ -1,3 +1,4 @@
+import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
 import { ProductsCreateComponent } from './components/product/products-create/products-create.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -17,8 +18,11 @@ component:ProductComponent
  {
   path:"products/create",
 component:ProductsCreateComponent
+ },
+ {
+  path:"products/edit/:id",
+component:ProductEditComponent
  }
-
 ];
 
 @NgModule({

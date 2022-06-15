@@ -1,0 +1,6 @@
+
+<i  [matMenuTriggerFor]="menu" class="material-icons"  >more_vert</i>
+<mat-menu #menu="matMenu">
+  <button (click)="confirmDelete()" mat-menu-item>Delete</button>
+  <button  mat-menu-item (click)="editProduct()" >Edit</button>
+</mat-menu>

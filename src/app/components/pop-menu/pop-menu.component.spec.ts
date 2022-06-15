@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProductsReadComponent } from './products-read.component';
+import { PopMenuComponent } from './pop-menu.component';
 
-describe('ProductsReadComponent', () => {
-  let component: ProductsReadComponent;
-  let fixture: ComponentFixture<ProductsReadComponent>;
+describe('PopMenuComponent', () => {
+  let component: PopMenuComponent;
+  let fixture: ComponentFixture<PopMenuComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProductsReadComponent ]
+      declarations: [ PopMenuComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ProductsReadComponent);
+    fixture = TestBed.createComponent(PopMenuComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
