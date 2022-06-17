@@ -40,6 +40,8 @@ import { ImagepickerComponent } from './components/imagepicker/imagepicker.compo
 import { SeeProductsDetailsComponent } from './components/dialogs/see-products-details/see-products-details.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { LoginComponent } from './views/login/login.component';
+import { ProductDetailsComponent } from './components/product/product-details/product-details.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 @NgModule({
   declarations: [
     AppComponent,
@@ -58,6 +60,7 @@ import { LoginComponent } from './views/login/login.component';
     SeeProductsDetailsComponent,
     LoadingComponent,
     LoginComponent,
+    ProductDetailsComponent,
 
   ],
   imports: [
@@ -82,7 +85,7 @@ import { LoginComponent } from './views/login/login.component';
     MatPaginatorModule,
     MatSortModule,
     MatDialogModule,
-    NgpImagePickerModule,MatSelectModule
+    NgpImagePickerModule,MatSelectModule,MatSlideToggleModule
   ],
   providers: [ {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}],
   bootstrap: [AppComponent]

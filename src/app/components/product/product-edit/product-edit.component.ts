@@ -1,5 +1,6 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ImagePickerConf } from 'ngp-image-picker';
 import { Product } from 'src/app/models/product';
@@ -18,7 +19,17 @@ export class ProductEditComponent implements OnInit {
     supplier: "",
 
   }
-  constructor(private router: Router, private location: Location, private productServices: ProductsService, private headerServices: HeaderservicesService, private route: ActivatedRoute) { }
+  
+  categories=["Food","Clouthes","Tech","Digital","Kitchen","Other"];
+  public ownerForm: FormGroup;
+  constructor(private router: Router, private location: Location, private productServices: ProductsService, private headerServices: HeaderservicesService, private route: ActivatedRoute) {
+
+    this.ownerForm = new FormGroup({
+      name: new FormControl('', [Validators.required, ]),
+      category:new FormControl('',[Validators.required])
+
+    });
+   }
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
@@ -27,7 +38,10 @@ export class ProductEditComponent implements OnInit {
     })
     this.headerServices.headerData.title = "Edit Product"
 
+  }  public hasError = (controlName: string, errorName: string) =>{
+    return this.ownerForm.controls[controlName].hasError(errorName);
   }
+
   onImageChange(event: any) {
 
     this.productToAdd.base64Image = event;

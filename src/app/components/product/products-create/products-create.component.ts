@@ -16,7 +16,7 @@ import { ImagePickerConf } from 'ngp-image-picker';
 export class ProductsCreateComponent implements OnInit {
 
 
-categories=["Food","Clouthes","Tech","Digital","Kitchen","Other"]
+categories=["","Food","Clouthes","Tech","Digital","Kitchen","Other"]
 
   public ownerForm: FormGroup;
 
@@ -30,7 +30,8 @@ categories=["Food","Clouthes","Tech","Digital","Kitchen","Other"]
     headerServices.headerData.title = "Add new product to list"
     this.ownerForm = new FormGroup({
       name: new FormControl('', [Validators.required, ]),
-      category:new FormControl('',[Validators.required])
+      category:new FormControl('',[Validators.required]),
+      gender:new FormControl('',[Validators.required])
 
     });
   }

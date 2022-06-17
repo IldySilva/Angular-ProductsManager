@@ -20,7 +20,7 @@
                         <mat-form-field appearance="outline">
                             <mat-label>Price ($)</mat-label>
 
-                            <input matInput placeholder="Price ($)" required [(ngModel)]="productToAdd.price"
+                            <input matInput  type="number" placeholder="Price ($)" required [(ngModel)]="productToAdd.price"
                                 name="price" />
                         </mat-form-field>
                     </div>
@@ -31,13 +31,14 @@
 
                     <mat-form-field appearance="outline"  >
                         <mat-label>Category</mat-label>
-                        <mat-select placeholder="Category" [style]="" required
+                        <mat-select placeholder="Category" [style]="" required 
                         [(ngModel)]="productToAdd.category" name="category"  onchange="">
                             <mat-option *ngFor="let cat of categories" [value]="cat">
                                 {{cat}}
                             </mat-option>
+                        
                         </mat-select>
-                        <mat-error *ngIf="hasError('name', 'required')">Category is required</mat-error>
+                        <mat-error *ngIf="hasError('category', 'required')">Category is required</mat-error>
                     </mat-form-field>
 
                     <div class="spacer"> </div>
@@ -49,7 +50,7 @@
                                 {{gender}}
                             </mat-option>
                         </mat-select>
-                        <mat-error *ngIf="hasError('name', 'required')">Gender is required</mat-error>
+                        <mat-error *ngIf="hasError('gender', 'required')">Gender is required</mat-error>
                     </mat-form-field>
 
                 </div>
@@ -64,7 +65,7 @@
 
                 <mat-form-field appearance="outline">
                     <mat-label>Description</mat-label>
-                    <input matInput placeholder="Description" [(ngModel)]="productToAdd.description" name="description">
+                    <textarea matInput placeholder="Description" [(ngModel)]="productToAdd.description" name="description"></textarea>
                 </mat-form-field>
 
             </form>

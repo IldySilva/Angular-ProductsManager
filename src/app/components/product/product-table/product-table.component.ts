@@ -16,7 +16,7 @@ export class ProductTableComponent implements OnInit {
   @ViewChild(MatMenuTrigger)
   trigger!: MatMenuTrigger;
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name', "price", "supplier", "createdDate", "options"];
+  displayedColumns = ['id', 'name', "price", "supplier", "createdDate", "options","active","soldOff"];
   products: Product[] = [];
 
 
@@ -36,6 +36,10 @@ export class ProductTableComponent implements OnInit {
     },);
   }
   ngOnInit(): void {
+
+  }
+  setSoldOff(p:Product){
+p.active=false;
 
   }
 

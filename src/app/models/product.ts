@@ -12,4 +12,6 @@ base64Image?:string;
 category?:string;
 gender?:string;
 description?:string;
+soldOff?:boolean;
+active?:boolean;
 }

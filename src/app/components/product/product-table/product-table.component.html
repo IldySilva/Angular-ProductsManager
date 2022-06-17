@@ -26,6 +26,14 @@
       <th mat-header-cell *matHeaderCellDef >Options</th>
       <td mat-cell *matCellDef="let row"><app-pop-menu [product]="row" ></app-pop-menu></td>
     </ng-container>
+    <ng-container matColumnDef="active">
+      <th mat-header-cell *matHeaderCellDef >Active</th>
+      <td mat-cell *matCellDef="let row"><mat-slide-toggle [checked]="row.active??true"></mat-slide-toggle></td>
+    </ng-container>
+    <ng-container matColumnDef="soldOff">
+      <th mat-header-cell *matHeaderCellDef >Sold Off</th>
+      <td mat-cell *matCellDef="let row"><mat-slide-toggle [checked]="row.soldOff??false" (toggleChange)="setSoldOff(row)" ></mat-slide-toggle></td>
+    </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
