@@ -63,6 +63,8 @@ this.headerServices.isLoading=true;
   this.productToAdd.createdDate=new Date().toISOString().slice(0, 10)
  this.productServices.create(this.productToAdd).subscribe(prod => {
       this.productToAdd = prod;
+this.returnToPreviousPage();
+
       this.productServices.dialogs.showMessage("Producted Saved")
 
       this.headerServices.isLoading=false;

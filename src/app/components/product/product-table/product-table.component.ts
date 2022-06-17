@@ -19,7 +19,9 @@ export class ProductTableComponent implements OnInit {
   displayedColumns = ['id', 'name', "price", "supplier", "createdDate", "options"];
   products: Product[] = [];
 
+
   constructor(private productServices: ProductsService, header: HeaderservicesService) {
+
 
 
     setTimeout(() => {
