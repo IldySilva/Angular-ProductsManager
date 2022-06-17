@@ -1,34 +1,68 @@
+.formField {
 
-.confirm-container{
-display: flex;
-align-items: center;
-flex-direction: column;
+    width: 100%;
 
 }
-.title{
+
+.confirm-container {
     display: flex;
-        align-items: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+.nameAndPic {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.priceAndName {
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.title {
+    display: flex;
+    align-items: center;
     justify-self: center;
-     
-    }
-    .title i{
-    
-        margin-right: 10px;
-    }
-    .accept{
-    
+
+}
+
+.title i {
+
+    margin-right: 10px;
+}
+
+.accept {
+
     color: red;
-    
-    }
-    .actions{
+
+}
+
+.actions {
     justify-content: flex-end;
-    
-    }
 
-    img{
+}
 
-        border-radius: 40px;
-width: 200px;
-height: 200px;
+img {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 40px;
+    width: 200px;
+  height: 200px;
 
-    }
+}.categoryAndgender {
+    display: flex;
+    align-content: space-between;
+    justify-content: space-between;
+}
+.supAndDesc{
+
+align-items: center;
+justify-content: space-between;
+    display: flex;
+}

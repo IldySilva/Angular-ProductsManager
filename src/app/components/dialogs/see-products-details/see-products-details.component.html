@@ -1,28 +1,53 @@
-
 <div class="confirm-container">
-    <img  src={{product.base64Image}} />
-    <h2 matDialogTitle class="title">{{product.name}}</h2>
     <form action="" class="formField">
+        <div class="nameAndPic">
+            <img src="{{ productToAdd.base64Image }}" />
 
-                    <mat-form-field>
-                        <input matInput placeholder="Name" readonly   [(ngModel)]="product.name"  name="name">
-                    </mat-form-field>
-                 
-                    <mat-form-field>
-                        <input matInput placeholder="Price ($)"  readonly  [(ngModel)]="product.price" name="price">
-                    </mat-form-field>
-                    
-                    <mat-form-field>
-                        <input matInput placeholder="Supplier (Company or Person)"   readonly    [(ngModel)]="product.supplier" name="supplier">
-                    </mat-form-field>
-                    <mat-form-field>
-                        <input matInput placeholder="Created Datetime"   readonly    [(ngModel)]="product.createdDate" name="datetime">
-                    </mat-form-field>
-                </form>
-    
+            <div class="priceAndName">
+                <mat-form-field appearance="outline" color="blue" class="mat-form-field-outline">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Name" [style]=""  readonly="" [(ngModel)]="productToAdd.name"
+                        name="name" />
+                   
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Price ($)</mat-label>
+
+                    <input matInput placeholder="Price ($)"  readonly="" [(ngModel)]="productToAdd.price" name="price" />
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="categoryAndgender">
+            <mat-form-field appearance="outline">
+                <mat-label>Category</mat-label>
+
+                <input matInput placeholder="Category" readonly="" [(ngModel)]="productToAdd.category" name="category" />
+            </mat-form-field>
+
+            <div class="spacer"></div>
+            <mat-form-field appearance="outline">
+                <mat-label>Gender</mat-label>
+                <input matInput placeholder="Gender" readonly="" [(ngModel)]="productToAdd.gender" name="gender" />
+            </mat-form-field>
+        </div>
+
+    <div class="supAndDesc">
+        <mat-form-field appearance="outline">
+            <mat-label>Supplier</mat-label>
+            
+            <input matInput placeholder="Supplier (Company or Person)"  readonly [(ngModel)]="productToAdd.supplier"
+                name="supplier" />
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Description</mat-label>
+
+            <input matInput placeholder="Description" readonly [(ngModel)]="productToAdd.description">
+        </mat-form-field>
+   
+    </div>
+    </form>
+
     <mat-dialog-actions class="actions">
-        <button mat-button matDialogClose class="cancel"  >OK</button>
+        <button mat-button matDialogClose class="cancel">OK</button>
     </mat-dialog-actions>
-
-
 </div>

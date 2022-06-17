@@ -9,4 +9,7 @@ qtdInStock?:number;
 supplier?:string;
 createdDate?:string;
 base64Image?:string;
+category?:string;
+gender?:string;
+description?:string;
 }

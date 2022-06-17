@@ -1,5 +1,6 @@
 
 <app-loading *ngIf="header.isLoading==true" ></app-loading>
+<app-login *ngIf="header.userIsLogged==false"></app-login>
 <app-header></app-header>
 <app-side-nav></app-side-nav>
 <app-footer></app-footer>

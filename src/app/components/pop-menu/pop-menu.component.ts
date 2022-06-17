@@ -39,7 +39,7 @@ this.router.navigate(["products/edit/"+this.product.id])
 
 seeDetails(){
   const dialogRef = this.dialog.open(SeeProductsDetailsComponent, {
-    width: '250px',
+    width: '40%',
     data: this.product,
     panelClass:"dialogClass"
   });

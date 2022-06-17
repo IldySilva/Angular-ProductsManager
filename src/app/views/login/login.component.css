@@ -1,0 +1,62 @@
+.loginContent{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(43, 81, 97, 0.452);
+    position: absolute;
+    z-index: 10;
+    display: flex;
+    backdrop-filter: blur(6px);
+    align-items: center;
+    justify-content: center;
+    
+    
+    }
+    
+    .contentCard{
+    width: 30%;
+    height: 60%;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 1px 1px 20px rgba(0, 42, 74, 0.234);
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    
+    
+    }
+    
+    .form{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    width: 80%;
+    align-self: center;
+    }
+    
+    .titleContainer{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 8vh;
+    
+    }
+    
+    .welcome{
+    font-size: 2rem;
+    
+    }
+    .mainButtons{
+        margin-top: 30px;
+    height: 6vh;
+        width: 100%;
+    }
+    a{
+    align-self: flex-end;
+    margin-top: 10px;
+    text-decoration: underline;
+    color: var(--mainColor);
+    }
+    
+    
+      

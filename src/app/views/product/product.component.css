@@ -8,3 +8,6 @@ height: 3rem;
 justify-content: space-between;
     display: flex;
 }
+.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+    color: white;
+}
