@@ -1,8 +1,26 @@
-<mat-toolbar class="header mat-elevation-z0">
+<mat-toolbar class="header mat-elevation-z0 header">
+   
+<div class="first">
     <a class="logo" routerLink="/">
         <h2>Kiami<span>Soft</span></h2>
     </a>
 
     <span class="currentTab"> | {{title}} </span>
+</div>
 
+    <div class="otherOptions">
+        <i class="material-icons">notifications</i>
+    
+        <i class="material-icons">settings</i>
+        <div class="circleAvatar"></div>
+        <span class="username">Ildeberto Silva</span>
+     <i class="material-icons" [matMenuTriggerFor]="menu">more_vert</i>
+        <mat-menu #menu="matMenu" class="menu" >
+          <button mat-menu-item  > <i class="material-icons">logout</i>Logout</button>
+          <button mat-menu-item> <i class="material-icons">logout</i>Item 2</button>
+          <button mat-menu-item> <i class="material-icons">logout</i>Item 3</button>
+          <button mat-menu-item> <i class="material-icons">logout</i>Item 4</button>
+        </mat-menu>
+    
+      </div>
 </mat-toolbar>

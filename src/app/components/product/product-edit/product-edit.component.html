@@ -3,7 +3,7 @@
 
     <mat-card class="mat-elevation-z4 ">
         <form action="" class="formField">
-
+            <ngp-image-picker [_imageSrc]="productToAdd.base64Image" class="imagePicker"  [_config]="imagePickerConf" ($imageChanged)="onImageChange($event)"></ngp-image-picker>
             <mat-form-field>
                 <input matInput placeholder="Name" [(ngModel)]="productToAdd.name"  name="name">
             </mat-form-field>

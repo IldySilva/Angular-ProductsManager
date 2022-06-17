@@ -18,3 +18,50 @@ text-decoration: none;
 }
 
 
+.header {
+    height: 70px;
+    width:100%;
+    background-color: rgba(238, 238, 238, 0.592);
+
+    display: flex;
+justify-content: space-between;
+
+}
+
+.header a {
+    text-decoration: none;
+    color: black;
+}
+
+.otherOptions{
+flex-direction: row;
+display: flex;
+align-items: center;
+
+
+}
+.otherOptions i,div,.username {
+   margin-right: 14px;
+    
+    cursor: pointer;
+    }
+
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .circleAvatar{
+
+    height: 24px;
+    width: 24px;
+    background-color: grey;
+    border-radius: 100px;
+  }
+
+ 
+
+.first{
+
+    display: flex;
+}
+

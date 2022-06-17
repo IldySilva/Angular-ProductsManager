@@ -1,0 +1,28 @@
+
+<div class="confirm-container">
+    <img  src={{product.base64Image}} />
+    <h2 matDialogTitle class="title">{{product.name}}</h2>
+    <form action="" class="formField">
+
+                    <mat-form-field>
+                        <input matInput placeholder="Name" readonly   [(ngModel)]="product.name"  name="name">
+                    </mat-form-field>
+                 
+                    <mat-form-field>
+                        <input matInput placeholder="Price ($)"  readonly  [(ngModel)]="product.price" name="price">
+                    </mat-form-field>
+                    
+                    <mat-form-field>
+                        <input matInput placeholder="Supplier (Company or Person)"   readonly    [(ngModel)]="product.supplier" name="supplier">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="Created Datetime"   readonly    [(ngModel)]="product.createdDate" name="datetime">
+                    </mat-form-field>
+                </form>
+    
+    <mat-dialog-actions class="actions">
+        <button mat-button matDialogClose class="cancel"  >OK</button>
+    </mat-dialog-actions>
+
+
+</div>

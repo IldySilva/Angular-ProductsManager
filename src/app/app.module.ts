@@ -15,12 +15,12 @@ import { ProductComponent } from './views/product/product.component';
 import { MatButtonModule } from "@angular/material/button";
 import { DashboardHomeComponent } from './views/dashboard-home/dashboard-home.component';
 import { MatCardModule } from "@angular/material/card";
-
+import { NgpImagePickerModule } from 'ngp-image-picker';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatSnackBarModule } from '@angular/material/snack-bar'
-import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { HttpClientModule } from "@angular/common/http";
 
 import { ProductsCreateComponent } from './components/product/products-create/products-create.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -35,6 +35,10 @@ import { MatSortModule } from '@angular/material/sort';
 import { ProductTableComponent } from './components/product/product-table/product-table.component';
 import { PopMenuComponent } from './components/pop-menu/pop-menu.component';
 import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
+import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
+import { ImagepickerComponent } from './components/imagepicker/imagepicker.component';
+import { SeeProductsDetailsComponent } from './components/dialogs/see-products-details/see-products-details.component';
+import { LoadingComponent } from './components/loading/loading.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,8 +51,11 @@ import { ProductEditComponent } from './components/product/product-edit/product-
     DashboardComponent,
     ProductTableComponent,
     PopMenuComponent,
-  DeleteDialogComponent,
-  ProductEditComponent
+    DeleteDialogComponent,
+    ProductEditComponent,
+    ImagepickerComponent,
+    SeeProductsDetailsComponent,
+    LoadingComponent,
 
   ],
   imports: [
@@ -73,9 +80,9 @@ import { ProductEditComponent } from './components/product/product-edit/product-
     MatPaginatorModule,
     MatSortModule,
     MatDialogModule,
-
+    NgpImagePickerModule,
   ],
-  providers: [],
+  providers: [ {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

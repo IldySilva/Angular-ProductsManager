@@ -1,3 +1,4 @@
+import { SeeProductsDetailsComponent } from './../dialogs/see-products-details/see-products-details.component';
 import { Router } from '@angular/router';
 import { DeleteDialogComponent } from './../dialogs/delete-dialog/delete-dialog.component';
 import { Product } from './../../models/product';
@@ -34,5 +35,14 @@ confirmDelete(){
 }
 editProduct(){
 this.router.navigate(["products/edit/"+this.product.id])
+}
+
+seeDetails(){
+  const dialogRef = this.dialog.open(SeeProductsDetailsComponent, {
+    width: '250px',
+    data: this.product,
+    panelClass:"dialogClass"
+  });
+  
 }
 }

@@ -1,2 +1,17 @@
-<button mat-raised-button class="mat-elevation-z3" (click)="NavigateToAddNewProduct()">Add New Product</button>
+<div class="options">
+  <button
+    mat-raised-button
+    class="mat-elevation-z3"
+    (click)="NavigateToAddNewProduct()"
+  >
+    Add New Product
+  </button>
+  <div class="filterAndSearch">
+    <mat-form-field>
+      <input class="searchbox"  matInput placeholder="Search by name" />
+    </mat-form-field>
+  
+  
+  </div>
+</div>
 <app-product-table></app-product-table>

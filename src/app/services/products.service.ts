@@ -1,3 +1,4 @@
+import { HeaderservicesService } from 'src/app/services/view/headerData/headerservices.service';
 import { catchError, map } from 'rxjs/operators';
 import { DialogsService } from './view/dialogs.service';
 import { HttpClient } from '@angular/common/http';
@@ -11,14 +12,15 @@ import { Product } from '../models/product';
 export class ProductsService {
 
 
-  baseUrl = "http://localhost:3001/products";
+  baseUrl = "https://json-server-kiami.herokuapp.com/products";
   dialogs:any;
-  constructor(private http: HttpClient,viewServices:DialogsService) { 
+  constructor(private http: HttpClient,viewServices:DialogsService,private services: HeaderservicesService) { 
 this.dialogs=viewServices;
 
   }
 
   create(product: Product): Observable<Product> {
+    
     return this.http.post<Product>(this.baseUrl, product).pipe(map((obj)=>obj),catchError((e)=>this.errorHandler(e)))
   }
   readAll(): Observable<Product[]> {
@@ -45,6 +47,7 @@ this.dialogs=viewServices;
   errorHandler(e:any):Observable<any>{
 
 this.dialogs.showMessage("Ocorreu um erro",true)
+this.services.isLoading=false;
 return EMPTY;
 
   }
