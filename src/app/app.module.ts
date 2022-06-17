@@ -15,7 +15,7 @@ import { ProductComponent } from './views/product/product.component';
 import { MatButtonModule } from "@angular/material/button";
 import { DashboardHomeComponent } from './views/dashboard-home/dashboard-home.component';
 import { MatCardModule } from "@angular/material/card";
-import { NgpImagePickerModule } from 'ngp-image-picker';
+
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
@@ -36,9 +36,6 @@ import { ProductTableComponent } from './components/product/product-table/produc
 import { PopMenuComponent } from './components/pop-menu/pop-menu.component';
 import { ProductEditComponent } from './components/product/product-edit/product-edit.component';
 import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
-import { ImagepickerComponent } from './components/imagepicker/imagepicker.component';
-import { SeeProductsDetailsComponent } from './components/dialogs/see-products-details/see-products-details.component';
-import { LoadingComponent } from './components/loading/loading.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,9 +50,6 @@ import { LoadingComponent } from './components/loading/loading.component';
     PopMenuComponent,
     DeleteDialogComponent,
     ProductEditComponent,
-    ImagepickerComponent,
-    SeeProductsDetailsComponent,
-    LoadingComponent,
 
   ],
   imports: [
@@ -80,7 +74,7 @@ import { LoadingComponent } from './components/loading/loading.component';
     MatPaginatorModule,
     MatSortModule,
     MatDialogModule,
-    NgpImagePickerModule,
+
   ],
   providers: [ {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}],
   bootstrap: [AppComponent]
