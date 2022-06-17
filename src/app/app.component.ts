@@ -17,7 +17,7 @@ export class AppComponent {
     private headerServices: HeaderservicesService
   ) { 
 
-this.header=headerServices;
+this.header=headerServices
   }
   title = 'angulartest';
 }
